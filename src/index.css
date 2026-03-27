@@ -1,1 +1,100 @@
 @import url('bootstrap');
+
+body {
+    background-color: #141414;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: red;
+    font-weight: bold;
+}
+
+header input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+header button {
+    background-color: red;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+header button:hover {
+    background-color: darkred;
+}
+
+/* CARD */
+.movie-card {
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.3s;
+    border-radius: 10px;
+}
+
+/* HOVER ZOOM */
+.movie-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-card:hover .overlay {
+    opacity: 1;
+}
+
+/* STARS */
+svg {
+    color: gold;
+}
+
+.overview {
+    font-size: 0.75rem;
+    margin-top: 8px;
+    overflow: hidden;
+}
